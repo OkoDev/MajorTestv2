@@ -1,0 +1,186 @@
+/*--------fonts--------*/
+@import url(//fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap);
+@import url(//db.onlinewebfonts.com/c/a5bc72787ae87e21089ed84978da2e74?family=BoldBrush);
+
+/*--------main--------*/
+:root {
+    --main-font: 'Raleway', sans-serif;
+    --logo-font: 'BoldBrush', serif;
+    --text-color: #1d1d25;
+    --footer-color: #363636;
+    --footer-text-color: #ffffff;
+
+    --font-18: 1.125rem;
+    --font-20: 1.25rem;
+    --font-30: 1.875rem;
+
+    --text-medium: 500;
+    --text-semi-bold: 600;
+}
+
+@media (min-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header-phone a {
+        font-size: var(--font-30);
+        font-weight: var(--text-medium);
+    }
+
+    .carousel-caption-head,
+    .jumbotron-header {
+        font-size: 1.4285714285714286rem;
+        font-weight: bold;
+    }
+
+    .carousel-caption-title,
+    .jumbotron-title {
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+
+    .header-phone a {
+        font-size: var(--font-20);
+    }
+
+    .carousel-caption-head,
+    .jumbotron-header {
+        font-size: 1.875rem;
+    }
+
+    .carousel-caption-title,
+    .jumbotron-title {
+        font-size: 1.125rem;
+    }
+}
+
+body {
+    min-width: 480px;
+    font-family: var(--main-font);
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*--------side-drawer--------*/
+#side-drawer {
+    height: 100vh;
+    width: 336px;
+    top: 0;
+    left: -336px;
+    z-index: 1032; /*z-index of standard bootstrap navbar is 1030 + 1 offset due to side-drawer-void*/
+    transition: left 0.25s ease;
+}
+
+#side-drawer-void {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1031; /*z-index of standard bootstrap navbar is 1030*/
+}
+a {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: #3a3a4b;
+}
+
+/*--------navbar--------*/
+.navbar-brand {
+    font-family: var(--logo-font);
+    font-size: 3rem;
+}
+
+.navbar-nav .nav-link, .nav-link {
+    font-size: var(--font-20);
+    font-weight: var(--text-semi-bold);
+}
+
+.navbar-toggler-icon {
+    font-size: 1.875rem;
+}
+
+.form-control:focus,
+.btn:focus
+{
+    box-shadow: none;
+    border: white;
+}
+
+.form-control:focus {
+    background-image: linear-gradient(0deg, var(--text-color) 2px, rgba(0, 150, 136, 0) 0),
+    linear-gradient(0deg, rgba(0, 0, 0, .26) 1px, transparent 0);
+    outline: none;
+}
+
+/*--------carousel--------*/
+.carousel-item-img {
+    opacity: 0.9;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+
+.carousel-caption {
+    color: var(--text-color);
+    left: 5%;
+    top: 15%;
+}
+
+.carousel-caption-head {
+    font-size: 1.875rem;
+}
+
+.carousel-caption-title {
+    font-size: 1.125rem;
+}
+
+.carousel-caption .btn {
+    background-color: var(--text-color);
+    text-transform: unset;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #3a3a4b;
+}
+
+/*--------cards--------*/
+.card-title {
+    font-weight: bold;
+}
+
+/*--------footer--------*/
+.footer li a {
+    color: var(--footer-text-color);
+    font-size: var(--font-18);
+    font-weight: var(--text-medium);
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.footer button {
+    background-color: white;
+}
+
+.footer button:hover {
+    background-color: lightgray;
+
+}
+
